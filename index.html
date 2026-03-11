@@ -39,7 +39,7 @@ tailwind.config = {
 }
 </script>
 <style>
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; font-size: 18px; }
 
   /* ---- Slide-up animation ---- */
   .slide-up {
@@ -73,7 +73,7 @@ tailwind.config = {
 
   /* Parallax with sakimeshi key visual */
   .parallax-kv {
-    background-image: url('https://www.sakimeshi.com/_nuxt/img/b2eb8fb.jpg');
+    background-image: url('images/b2eb8fb.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -95,7 +95,9 @@ tailwind.config = {
 
   /* ---- Hero ---- */
   .hero-bg {
-    background: linear-gradient(170deg, #1e3a55 0%, #2B4C6F 40%, #3a7a72 100%);
+    background:
+      linear-gradient(170deg, rgba(30,58,85,0.85) 0%, rgba(43,76,111,0.8) 40%, rgba(58,122,114,0.85) 100%),
+      url('images/b2eb8fb.jpg') center / cover no-repeat;
   }
   .vignette::before {
     content: '';
@@ -222,25 +224,6 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- ===== GOCHI BANNER ===== -->
-<section class="content-section bg-sk-cream py-10">
-  <div class="max-w-2xl mx-auto px-4">
-    <a href="https://gochi.online/" target="_blank" rel="noopener" class="slide-up block rounded-2xl border border-sk-sage3 bg-white/80 p-6 md:p-8 text-center hover:shadow-lg transition-shadow">
-      <p class="font-hand text-sk-pink text-sm tracking-[0.2em] mb-3">さきめしの想いを受け継いで</p>
-      <h2 class="font-mincho text-xl md:text-2xl font-bold text-sk-navy mb-3">
-        「ごちめし」で、<br class="md:hidden">誰かにごちそうしませんか？
-      </h2>
-      <p class="font-mincho text-sm text-sk-navy/55 leading-relaxed mb-5">
-        飲食店のメニューをお食事券でプレゼントできるサービスです。<br>
-        大切な人へ、お世話になったあの人へ、食事の贈りものを。
-      </p>
-      <span class="inline-block font-mincho text-sm text-white bg-sk-sage hover:bg-sk-navy transition-colors rounded-full px-6 py-2.5">
-        ごちめし を見る →
-      </span>
-    </a>
-  </div>
-</section>
-
 <!-- ===== LETTER ===== -->
 <section id="letter" class="content-section py-20 bg-sk-mint">
   <div class="max-w-2xl mx-auto px-6">
@@ -294,6 +277,25 @@ tailwind.config = {
         </p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== GOCHI BANNER ===== -->
+<section class="content-section bg-sk-mint py-10">
+  <div class="max-w-2xl mx-auto px-4">
+    <a href="https://gochi.online/" target="_blank" rel="noopener" class="slide-up block rounded-2xl border border-sk-sage3 bg-white/80 p-6 md:p-8 text-center hover:shadow-lg transition-shadow">
+      <p class="font-hand text-sk-pink text-sm tracking-[0.2em] mb-3">さきめしの想いを受け継いで</p>
+      <h2 class="font-mincho text-xl md:text-2xl font-bold text-sk-navy mb-3">
+        「ごちめし」で、<br class="md:hidden">誰かにごちそうしませんか？
+      </h2>
+      <p class="font-mincho text-sm text-sk-navy/55 leading-relaxed mb-5">
+        飲食店のメニューをお食事券でプレゼントできるサービスです。<br>
+        大切な人へ、お世話になったあの人へ、食事の贈りものを。
+      </p>
+      <span class="inline-block font-mincho text-sm text-white bg-sk-sage hover:bg-sk-navy transition-colors rounded-full px-6 py-2.5">
+        ごちめし を見る →
+      </span>
+    </a>
   </div>
 </section>
 
