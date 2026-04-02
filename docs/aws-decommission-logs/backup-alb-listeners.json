@@ -1,0 +1,53 @@
+{
+    "Listeners": [
+        {
+            "ListenerArn": "arn:aws:elasticloadbalancing:ap-northeast-1:682138580642:listener/app/sakimeshi-alb-redirect/eea6b205510c8004/20ed7d0b80717431",
+            "LoadBalancerArn": "arn:aws:elasticloadbalancing:ap-northeast-1:682138580642:loadbalancer/app/sakimeshi-alb-redirect/eea6b205510c8004",
+            "Port": 80,
+            "Protocol": "HTTP",
+            "DefaultActions": [
+                {
+                    "Type": "redirect",
+                    "Order": 1,
+                    "RedirectConfig": {
+                        "Protocol": "HTTPS",
+                        "Port": "443",
+                        "Host": "#{host}",
+                        "Path": "/#{path}",
+                        "Query": "#{query}",
+                        "StatusCode": "HTTP_301"
+                    }
+                }
+            ]
+        },
+        {
+            "ListenerArn": "arn:aws:elasticloadbalancing:ap-northeast-1:682138580642:listener/app/sakimeshi-alb-redirect/eea6b205510c8004/9656040afcbdbf45",
+            "LoadBalancerArn": "arn:aws:elasticloadbalancing:ap-northeast-1:682138580642:loadbalancer/app/sakimeshi-alb-redirect/eea6b205510c8004",
+            "Port": 443,
+            "Protocol": "HTTPS",
+            "Certificates": [
+                {
+                    "CertificateArn": "arn:aws:acm:ap-northeast-1:682138580642:certificate/b2e09cc1-7ed6-40c9-9a49-e41653121339"
+                }
+            ],
+            "SslPolicy": "ELBSecurityPolicy-2016-08",
+            "DefaultActions": [
+                {
+                    "Type": "redirect",
+                    "Order": 1,
+                    "RedirectConfig": {
+                        "Protocol": "HTTPS",
+                        "Port": "443",
+                        "Host": "www.sakimeshi.com",
+                        "Path": "/#{path}",
+                        "Query": "#{query}",
+                        "StatusCode": "HTTP_301"
+                    }
+                }
+            ],
+            "MutualAuthentication": {
+                "Mode": "off"
+            }
+        }
+    ]
+}

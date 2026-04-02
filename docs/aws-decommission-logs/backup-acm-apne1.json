@@ -1,0 +1,31 @@
+{
+    "CertificateSummaryList": [
+        {
+            "CertificateArn": "arn:aws:acm:ap-northeast-1:682138580642:certificate/b2e09cc1-7ed6-40c9-9a49-e41653121339",
+            "DomainName": "sakimeshi.com",
+            "SubjectAlternativeNameSummaries": [
+                "sakimeshi.com",
+                "*.sakimeshi.com"
+            ],
+            "HasAdditionalSubjectAlternativeNames": false,
+            "Status": "ISSUED",
+            "Type": "AMAZON_ISSUED",
+            "KeyAlgorithm": "RSA-2048",
+            "KeyUsages": [
+                "DIGITAL_SIGNATURE",
+                "KEY_ENCIPHERMENT"
+            ],
+            "ExtendedKeyUsages": [
+                "TLS_WEB_SERVER_AUTHENTICATION"
+            ],
+            "ExportOption": "DISABLED",
+            "InUse": true,
+            "Exported": false,
+            "RenewalEligibility": "ELIGIBLE",
+            "NotBefore": "2025-11-10T09:00:00+09:00",
+            "NotAfter": "2026-12-09T08:59:59+09:00",
+            "CreatedAt": "2020-05-08T11:36:45+09:00",
+            "IssuedAt": "2025-11-10T09:46:24.553000+09:00"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "id": "roj28wpusl",
+            "name": "Sakimeshi-API",
+            "createdDate": "2020-05-17T11:55:52+09:00",
+            "apiKeySource": "HEADER",
+            "endpointConfiguration": {
+                "types": [
+                    "REGIONAL"
+                ]
+            },
+            "disableExecuteApiEndpoint": false,
+            "rootResourceId": "5u09rbp8e1",
+            "securityPolicy": "TLS_1_0",
+            "apiStatus": "AVAILABLE"
+        }
+    ]
+}

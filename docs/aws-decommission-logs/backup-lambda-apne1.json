@@ -1,0 +1,202 @@
+{
+    "Functions": [
+        {
+            "FunctionName": "addMasterTable",
+            "FunctionArn": "arn:aws:lambda:ap-northeast-1:682138580642:function:addMasterTable",
+            "Runtime": "python3.7",
+            "Role": "arn:aws:iam::682138580642:role/service-role/s3_and_dynamo",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 1026,
+            "Description": "",
+            "Timeout": 600,
+            "MemorySize": 3008,
+            "LastModified": "2020-05-17T02:47:36.526+0000",
+            "CodeSha256": "CJEuKl6i8j/ygrSOH+JY7SDYzh0XzJLUYybEx4NzH4E=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "6a0737f9-274a-4088-a96c-3d4ad33f1301",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/addMasterTable"
+            }
+        },
+        {
+            "FunctionName": "Sakimeshi_getShopDetail",
+            "FunctionArn": "arn:aws:lambda:ap-northeast-1:682138580642:function:Sakimeshi_getShopDetail",
+            "Runtime": "python3.7",
+            "Role": "arn:aws:iam::682138580642:role/service-role/s3_and_dynamo",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 1948,
+            "Description": "",
+            "Timeout": 180,
+            "MemorySize": 3008,
+            "LastModified": "2020-05-17T05:03:02.718+0000",
+            "CodeSha256": "+gKGCXZeKFHjX0H8PrpQ6e8RhuSWcp5/WrfFgqDHDJs=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "7a726332-23df-4719-9afa-45f386e43c80",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/Sakimeshi_getShopDetail"
+            }
+        },
+        {
+            "FunctionName": "addShopList",
+            "FunctionArn": "arn:aws:lambda:ap-northeast-1:682138580642:function:addShopList",
+            "Runtime": "python3.7",
+            "Role": "arn:aws:iam::682138580642:role/service-role/s3_and_dynamo",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 3779,
+            "Description": "",
+            "Timeout": 900,
+            "MemorySize": 3008,
+            "LastModified": "2020-05-17T05:00:16.745+0000",
+            "CodeSha256": "w+gURl8UU+ev8D8+0c/yizeWJuFUeKRpy/68QOKG/0c=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "553e456d-b9bb-4dc3-b2eb-dc33a5635b54",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/addShopList"
+            }
+        },
+        {
+            "FunctionName": "Sakimeshi_getTotalDonation",
+            "FunctionArn": "arn:aws:lambda:ap-northeast-1:682138580642:function:Sakimeshi_getTotalDonation",
+            "Runtime": "python3.7",
+            "Role": "arn:aws:iam::682138580642:role/service-role/s3_and_dynamo",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 1202,
+            "Description": "",
+            "Timeout": 3,
+            "MemorySize": 128,
+            "LastModified": "2020-05-17T02:59:31.549+0000",
+            "CodeSha256": "8Gkt3VYmfiwLfYdL0SWgLh+Ig1u1L4yw1S31tsSOA2Y=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "0ac879f8-efb2-4dc2-9626-2d5fe3bc7de4",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/Sakimeshi_getTotalDonation"
+            }
+        },
+        {
+            "FunctionName": "Sakimeshi_getMaster",
+            "FunctionArn": "arn:aws:lambda:ap-northeast-1:682138580642:function:Sakimeshi_getMaster",
+            "Runtime": "python3.7",
+            "Role": "arn:aws:iam::682138580642:role/service-role/s3_and_dynamo",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 2762,
+            "Description": "",
+            "Timeout": 3,
+            "MemorySize": 128,
+            "LastModified": "2020-05-17T02:57:18.300+0000",
+            "CodeSha256": "JsL5SZTdbdv+LqM8uM2stkOwFXNkwBxG4eUfZPjTcJk=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "1f44e341-6bdc-4989-95e1-fa9613039818",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/Sakimeshi_getMaster"
+            }
+        },
+        {
+            "FunctionName": "Sakimeshi_getShopList",
+            "FunctionArn": "arn:aws:lambda:ap-northeast-1:682138580642:function:Sakimeshi_getShopList",
+            "Runtime": "python3.7",
+            "Role": "arn:aws:iam::682138580642:role/service-role/s3_and_dynamo",
+            "Handler": "lambda_function.lambda_handler",
+            "CodeSize": 2780,
+            "Description": "",
+            "Timeout": 180,
+            "MemorySize": 3008,
+            "LastModified": "2020-05-17T03:12:34.279+0000",
+            "CodeSha256": "fWe/jZ9D2ugDB0hSPK2ikjbLrlaHOyaS8ivQhzRZpe4=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "ce95b2e6-9709-4ddf-a4d3-f8b819d1e8d6",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/Sakimeshi_getShopList"
+            }
+        }
+    ]
+}

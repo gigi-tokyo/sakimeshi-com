@@ -1,0 +1,7 @@
+{
+    "TableNames": [
+        "MasterTable_Cities",
+        "MasterTable_Prefectures",
+        "SakimeshiMock_ShopData"
+    ]
+}

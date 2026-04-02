@@ -1,0 +1,34 @@
+{
+    "LoadBalancers": [
+        {
+            "LoadBalancerArn": "arn:aws:elasticloadbalancing:ap-northeast-1:682138580642:loadbalancer/app/sakimeshi-alb-redirect/eea6b205510c8004",
+            "DNSName": "sakimeshi-alb-redirect-1676421597.ap-northeast-1.elb.amazonaws.com",
+            "CanonicalHostedZoneId": "Z14GRHDCWA56QT",
+            "CreatedTime": "2020-05-08T02:52:25.930000+00:00",
+            "LoadBalancerName": "sakimeshi-alb-redirect",
+            "Scheme": "internet-facing",
+            "VpcId": "vpc-cff6ffa8",
+            "State": {
+                "Code": "active"
+            },
+            "Type": "application",
+            "AvailabilityZones": [
+                {
+                    "ZoneName": "ap-northeast-1a",
+                    "SubnetId": "subnet-2ffb3167",
+                    "LoadBalancerAddresses": []
+                },
+                {
+                    "ZoneName": "ap-northeast-1c",
+                    "SubnetId": "subnet-892e2ad2",
+                    "LoadBalancerAddresses": []
+                }
+            ],
+            "SecurityGroups": [
+                "sg-058f2a2027f11bc52"
+            ],
+            "IpAddressType": "ipv4",
+            "EnablePrefixForIpv6SourceNat": "off"
+        }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Addresses": [
+        {
+            "AllocationId": "eipalloc-0539b5ee590d61493",
+            "AssociationId": "eipassoc-01812ed7dadeb0cb8",
+            "Domain": "vpc",
+            "NetworkInterfaceId": "eni-0f27f497f129b1b08",
+            "NetworkInterfaceOwnerId": "682138580642",
+            "PrivateIpAddress": "172.31.43.21",
+            "PublicIpv4Pool": "amazon",
+            "NetworkBorderGroup": "ap-northeast-1",
+            "ServiceManaged": "alb",
+            "PublicIp": "35.79.110.222"
+        },
+        {
+            "AllocationId": "eipalloc-02cd8bcc184b16bb6",
+            "AssociationId": "eipassoc-03e17f44d65e74cb9",
+            "Domain": "vpc",
+            "NetworkInterfaceId": "eni-0f152ae61bf23c57d",
+            "NetworkInterfaceOwnerId": "682138580642",
+            "PrivateIpAddress": "172.31.8.233",
+            "PublicIpv4Pool": "amazon",
+            "NetworkBorderGroup": "ap-northeast-1",
+            "ServiceManaged": "alb",
+            "PublicIp": "54.92.9.11"
+        }
+    ]
+}

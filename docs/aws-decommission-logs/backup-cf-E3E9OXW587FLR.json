@@ -1,0 +1,396 @@
+{
+    "ETag": "E1372AT94VNOL1",
+    "DistributionConfig": {
+        "CallerReference": "1588753551612",
+        "Aliases": {
+            "Quantity": 1,
+            "Items": [
+                "stg.sakimeshi.com"
+            ]
+        },
+        "DefaultRootObject": "",
+        "Origins": {
+            "Quantity": 1,
+            "Items": [
+                {
+                    "Id": "S3-sakimeshi-stg",
+                    "DomainName": "sakimeshi-stg.s3.amazonaws.com",
+                    "OriginPath": "",
+                    "CustomHeaders": {
+                        "Quantity": 0
+                    },
+                    "S3OriginConfig": {
+                        "OriginAccessIdentity": "origin-access-identity/cloudfront/E30SIQ0NADB44C",
+                        "OriginReadTimeout": 30
+                    },
+                    "ConnectionAttempts": 3,
+                    "ConnectionTimeout": 10,
+                    "OriginShield": {
+                        "Enabled": false
+                    },
+                    "OriginAccessControlId": ""
+                }
+            ]
+        },
+        "OriginGroups": {
+            "Quantity": 0
+        },
+        "DefaultCacheBehavior": {
+            "TargetOriginId": "S3-sakimeshi-stg",
+            "TrustedSigners": {
+                "Enabled": false,
+                "Quantity": 0
+            },
+            "TrustedKeyGroups": {
+                "Enabled": false,
+                "Quantity": 0
+            },
+            "ViewerProtocolPolicy": "redirect-to-https",
+            "AllowedMethods": {
+                "Quantity": 2,
+                "Items": [
+                    "HEAD",
+                    "GET"
+                ],
+                "CachedMethods": {
+                    "Quantity": 2,
+                    "Items": [
+                        "HEAD",
+                        "GET"
+                    ]
+                }
+            },
+            "SmoothStreaming": false,
+            "Compress": true,
+            "LambdaFunctionAssociations": {
+                "Quantity": 1,
+                "Items": [
+                    {
+                        "LambdaFunctionARN": "arn:aws:lambda:us-east-1:682138580642:function:BasicAuthentication:2",
+                        "EventType": "viewer-request",
+                        "IncludeBody": false
+                    }
+                ]
+            },
+            "FunctionAssociations": {
+                "Quantity": 0
+            },
+            "FieldLevelEncryptionId": "",
+            "GrpcConfig": {
+                "Enabled": false
+            },
+            "ForwardedValues": {
+                "QueryString": false,
+                "Cookies": {
+                    "Forward": "none"
+                },
+                "Headers": {
+                    "Quantity": 0
+                },
+                "QueryStringCacheKeys": {
+                    "Quantity": 0
+                }
+            },
+            "MinTTL": 0,
+            "DefaultTTL": 0,
+            "MaxTTL": 0
+        },
+        "CacheBehaviors": {
+            "Quantity": 3,
+            "Items": [
+                {
+                    "PathPattern": "*.*",
+                    "TargetOriginId": "S3-sakimeshi-stg",
+                    "TrustedSigners": {
+                        "Enabled": false,
+                        "Quantity": 0
+                    },
+                    "TrustedKeyGroups": {
+                        "Enabled": false,
+                        "Quantity": 0
+                    },
+                    "ViewerProtocolPolicy": "redirect-to-https",
+                    "AllowedMethods": {
+                        "Quantity": 2,
+                        "Items": [
+                            "HEAD",
+                            "GET"
+                        ],
+                        "CachedMethods": {
+                            "Quantity": 2,
+                            "Items": [
+                                "HEAD",
+                                "GET"
+                            ]
+                        }
+                    },
+                    "SmoothStreaming": false,
+                    "Compress": true,
+                    "LambdaFunctionAssociations": {
+                        "Quantity": 1,
+                        "Items": [
+                            {
+                                "LambdaFunctionARN": "arn:aws:lambda:us-east-1:682138580642:function:BasicAuthentication:2",
+                                "EventType": "viewer-request",
+                                "IncludeBody": false
+                            }
+                        ]
+                    },
+                    "FunctionAssociations": {
+                        "Quantity": 0
+                    },
+                    "FieldLevelEncryptionId": "",
+                    "GrpcConfig": {
+                        "Enabled": false
+                    },
+                    "ForwardedValues": {
+                        "QueryString": false,
+                        "Cookies": {
+                            "Forward": "none"
+                        },
+                        "Headers": {
+                            "Quantity": 0
+                        },
+                        "QueryStringCacheKeys": {
+                            "Quantity": 0
+                        }
+                    },
+                    "MinTTL": 0,
+                    "DefaultTTL": 0,
+                    "MaxTTL": 0
+                },
+                {
+                    "PathPattern": "*/",
+                    "TargetOriginId": "S3-sakimeshi-stg",
+                    "TrustedSigners": {
+                        "Enabled": false,
+                        "Quantity": 0
+                    },
+                    "TrustedKeyGroups": {
+                        "Enabled": false,
+                        "Quantity": 0
+                    },
+                    "ViewerProtocolPolicy": "redirect-to-https",
+                    "AllowedMethods": {
+                        "Quantity": 2,
+                        "Items": [
+                            "HEAD",
+                            "GET"
+                        ],
+                        "CachedMethods": {
+                            "Quantity": 2,
+                            "Items": [
+                                "HEAD",
+                                "GET"
+                            ]
+                        }
+                    },
+                    "SmoothStreaming": false,
+                    "Compress": true,
+                    "LambdaFunctionAssociations": {
+                        "Quantity": 2,
+                        "Items": [
+                            {
+                                "LambdaFunctionARN": "arn:aws:lambda:us-east-1:682138580642:function:OriginRequest:2",
+                                "EventType": "origin-request",
+                                "IncludeBody": false
+                            },
+                            {
+                                "LambdaFunctionARN": "arn:aws:lambda:us-east-1:682138580642:function:BasicAuthentication:2",
+                                "EventType": "viewer-request",
+                                "IncludeBody": false
+                            }
+                        ]
+                    },
+                    "FunctionAssociations": {
+                        "Quantity": 0
+                    },
+                    "FieldLevelEncryptionId": "",
+                    "GrpcConfig": {
+                        "Enabled": false
+                    },
+                    "ForwardedValues": {
+                        "QueryString": false,
+                        "Cookies": {
+                            "Forward": "none"
+                        },
+                        "Headers": {
+                            "Quantity": 0
+                        },
+                        "QueryStringCacheKeys": {
+                            "Quantity": 0
+                        }
+                    },
+                    "MinTTL": 0,
+                    "DefaultTTL": 0,
+                    "MaxTTL": 0
+                },
+                {
+                    "PathPattern": "/",
+                    "TargetOriginId": "S3-sakimeshi-stg",
+                    "TrustedSigners": {
+                        "Enabled": false,
+                        "Quantity": 0
+                    },
+                    "TrustedKeyGroups": {
+                        "Enabled": false,
+                        "Quantity": 0
+                    },
+                    "ViewerProtocolPolicy": "redirect-to-https",
+                    "AllowedMethods": {
+                        "Quantity": 2,
+                        "Items": [
+                            "HEAD",
+                            "GET"
+                        ],
+                        "CachedMethods": {
+                            "Quantity": 2,
+                            "Items": [
+                                "HEAD",
+                                "GET"
+                            ]
+                        }
+                    },
+                    "SmoothStreaming": false,
+                    "Compress": true,
+                    "LambdaFunctionAssociations": {
+                        "Quantity": 2,
+                        "Items": [
+                            {
+                                "LambdaFunctionARN": "arn:aws:lambda:us-east-1:682138580642:function:BasicAuthentication:2",
+                                "EventType": "viewer-request",
+                                "IncludeBody": false
+                            },
+                            {
+                                "LambdaFunctionARN": "arn:aws:lambda:us-east-1:682138580642:function:OriginRequest:2",
+                                "EventType": "origin-request",
+                                "IncludeBody": false
+                            }
+                        ]
+                    },
+                    "FunctionAssociations": {
+                        "Quantity": 0
+                    },
+                    "FieldLevelEncryptionId": "",
+                    "GrpcConfig": {
+                        "Enabled": false
+                    },
+                    "ForwardedValues": {
+                        "QueryString": false,
+                        "Cookies": {
+                            "Forward": "none"
+                        },
+                        "Headers": {
+                            "Quantity": 0
+                        },
+                        "QueryStringCacheKeys": {
+                            "Quantity": 0
+                        }
+                    },
+                    "MinTTL": 0,
+                    "DefaultTTL": 0,
+                    "MaxTTL": 0
+                }
+            ]
+        },
+        "CustomErrorResponses": {
+            "Quantity": 11,
+            "Items": [
+                {
+                    "ErrorCode": 400,
+                    "ResponsePagePath": "/error_pages/40x.html",
+                    "ResponseCode": "400",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 403,
+                    "ResponsePagePath": "/",
+                    "ResponseCode": "200",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 404,
+                    "ResponsePagePath": "/",
+                    "ResponseCode": "200",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 405,
+                    "ResponsePagePath": "/error_pages/40x.html",
+                    "ResponseCode": "405",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 414,
+                    "ResponsePagePath": "/error_pages/40x.html",
+                    "ResponseCode": "414",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 416,
+                    "ResponsePagePath": "/error_pages/40x.html",
+                    "ResponseCode": "416",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 500,
+                    "ResponsePagePath": "/error_pages/50x.html",
+                    "ResponseCode": "500",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 501,
+                    "ResponsePagePath": "/error_pages/50x.html",
+                    "ResponseCode": "501",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 502,
+                    "ResponsePagePath": "/error_pages/50x.html",
+                    "ResponseCode": "502",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 503,
+                    "ResponsePagePath": "/error_pages/50x.html",
+                    "ResponseCode": "503",
+                    "ErrorCachingMinTTL": 0
+                },
+                {
+                    "ErrorCode": 504,
+                    "ResponsePagePath": "/error_pages/50x.html",
+                    "ResponseCode": "504",
+                    "ErrorCachingMinTTL": 0
+                }
+            ]
+        },
+        "Comment": "sakimeshi-stg",
+        "Logging": {
+            "Enabled": true,
+            "IncludeCookies": false,
+            "Bucket": "cf-accesslog-sakimeshi.s3.amazonaws.com",
+            "Prefix": "sakimeshi-stg"
+        },
+        "PriceClass": "PriceClass_All",
+        "Enabled": true,
+        "ViewerCertificate": {
+            "CloudFrontDefaultCertificate": false,
+            "ACMCertificateArn": "arn:aws:acm:us-east-1:682138580642:certificate/df50e41e-b307-4577-b08c-1f06f735a57b",
+            "SSLSupportMethod": "sni-only",
+            "MinimumProtocolVersion": "TLSv1.2_2018",
+            "Certificate": "arn:aws:acm:us-east-1:682138580642:certificate/df50e41e-b307-4577-b08c-1f06f735a57b",
+            "CertificateSource": "acm"
+        },
+        "Restrictions": {
+            "GeoRestriction": {
+                "RestrictionType": "none",
+                "Quantity": 0
+            }
+        },
+        "WebACLId": "",
+        "HttpVersion": "http2",
+        "IsIPV6Enabled": true,
+        "ContinuousDeploymentPolicyId": "",
+        "Staging": false
+    }
+}

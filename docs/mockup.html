@@ -8,6 +8,7 @@
 <meta property="og:description" content="コロナ禍で飲食店を応援した「さきめし」。たくさんの想いが届いた日々の記録です。">
 <meta property="og:type" content="website">
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Zen+Kurenaido&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet">
 <script>
@@ -39,7 +40,7 @@ tailwind.config = {
 }
 </script>
 <style>
-  html { scroll-behavior: smooth; font-size: 18px; }
+  html { scroll-behavior: smooth; }
 
   /* ---- Slide-up animation ---- */
   .slide-up {
@@ -73,7 +74,7 @@ tailwind.config = {
 
   /* Parallax with sakimeshi key visual */
   .parallax-kv {
-    background-image: url('images/b2eb8fb.jpg');
+    background-image: url('https://www.sakimeshi.com/_nuxt/img/b2eb8fb.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -95,9 +96,7 @@ tailwind.config = {
 
   /* ---- Hero ---- */
   .hero-bg {
-    background:
-      linear-gradient(170deg, rgba(30,58,85,0.85) 0%, rgba(43,76,111,0.8) 40%, rgba(58,122,114,0.85) 100%),
-      url('images/b2eb8fb.jpg') center / cover no-repeat;
+    background: linear-gradient(170deg, #1e3a55 0%, #2B4C6F 40%, #3a7a72 100%);
   }
   .vignette::before {
     content: '';
@@ -195,6 +194,7 @@ tailwind.config = {
     <nav class="hidden md:flex gap-8 text-sm text-sk-navy/60 font-mincho">
       <a href="#letter" class="hover:text-sk-pink transition">ごあいさつ</a>
       <a href="#story" class="hover:text-sk-pink transition">あゆみ</a>
+      <a href="#impact" class="hover:text-sk-pink transition">届いた想い</a>
       <a href="#voices" class="hover:text-sk-pink transition">受賞</a>
       <a href="#media" class="hover:text-sk-pink transition">メディア</a>
     </nav>
@@ -211,8 +211,29 @@ tailwind.config = {
     </h1>
     <p class="font-mincho text-base text-white/55 max-w-md mx-auto mb-12 leading-loose">
       行けないけど、応援したい。<br>
-      その想いをつないだ日々の記録。
+      その想いをつないだ<span class="hand-underline text-sk-pink2">1,XXX日間</span>の記録。
     </p>
+
+    <!-- KPI -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5 max-w-2xl mx-auto">
+      <div class="kpi-card rounded-xl p-4 text-center">
+        <p class="text-xl md:text-3xl font-bold counter text-white mb-1 font-hand" data-target="158000000" data-prefix="¥">¥0</p>
+        <p class="text-sk-sage3 text-xs font-mincho">届いた支援金額</p>
+      </div>
+      <div class="kpi-card rounded-xl p-4 text-center">
+        <p class="text-xl md:text-3xl font-bold counter text-white mb-1 font-hand" data-target="2450">0</p>
+        <p class="text-sk-sage3 text-xs font-mincho">救われたお店</p>
+      </div>
+      <div class="kpi-card rounded-xl p-4 text-center">
+        <p class="text-xl md:text-3xl font-bold counter text-white mb-1 font-hand" data-target="18500">0</p>
+        <p class="text-sk-sage3 text-xs font-mincho">応援してくれた人</p>
+      </div>
+      <div class="kpi-card rounded-xl p-4 text-center">
+        <p class="text-xl md:text-3xl font-bold counter text-white mb-1 font-hand" data-target="42000">0</p>
+        <p class="text-sk-sage3 text-xs font-mincho">届いた想いの数</p>
+      </div>
+    </div>
+    <p class="mt-3 text-white/20 text-xs">※ 数値はダミーです</p>
 
     <div class="mt-10 float-arrow">
       <a href="#letter" class="text-white/25 hover:text-white/50 transition">
@@ -234,7 +255,9 @@ tailwind.config = {
       </div>
 
       <div class="font-mincho text-sk-navy leading-[2.2] text-base mt-4">
-        <p class="text-lg md:text-xl font-bold mb-8">さきめしをご利用いただいた皆さまへ</p>
+        <p class="text-right text-sm text-sk-navy/40 mb-8">2024年 XX月</p>
+
+        <p class="mb-5">さきめしをご利用いただいた皆さまへ</p>
 
         <p class="mb-5">
           2020年の春。<br>
@@ -278,25 +301,6 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- ===== GOCHI BANNER ===== -->
-<section class="content-section bg-sk-mint py-10">
-  <div class="max-w-2xl mx-auto px-4">
-    <a href="https://gochi.online/" target="_blank" rel="noopener" class="slide-up block rounded-2xl border border-sk-sage3 bg-white/80 p-6 md:p-8 text-center hover:shadow-lg transition-shadow">
-      <p class="font-hand text-sk-pink text-sm tracking-[0.2em] mb-3">さきめしの想いを受け継いで</p>
-      <h2 class="font-mincho text-xl md:text-2xl font-bold text-sk-navy mb-3">
-        「ごちめし」で、<br class="md:hidden">誰かにごちそうしませんか？
-      </h2>
-      <p class="font-mincho text-sm text-sk-navy/55 leading-relaxed mb-5">
-        飲食店のメニューをお食事券でプレゼントできるサービスです。<br>
-        大切な人へ、お世話になったあの人へ、食事の贈りものを。
-      </p>
-      <span class="inline-block font-mincho text-sm text-white bg-sk-sage hover:bg-sk-navy transition-colors rounded-full px-6 py-2.5">
-        ごちめし を見る →
-      </span>
-    </a>
-  </div>
-</section>
-
 <!-- ===== PARALLAX: Key Visual ===== -->
 <div class="parallax-window parallax-kv" role="presentation">
   <div class="relative z-10 h-full flex items-center justify-center">
@@ -318,7 +322,7 @@ tailwind.config = {
       <div class="space-y-14">
 
         <div class="slide-up relative flex items-start gap-6 md:gap-0">
-          <div class="md:w-1/2 md:pr-12 md:text-right pl-10 md:pl-0">
+          <div class="md:w-1/2 md:pr-12 md:text-right">
             <span class="font-hand text-sk-pink">2020年 3月</span>
             <h3 class="font-mincho font-bold text-lg mt-1 text-sk-navy">はじまり</h3>
             <p class="text-sm text-sk-navy/65 mt-2 leading-relaxed">
@@ -346,7 +350,7 @@ tailwind.config = {
         </div>
 
         <div class="slide-up relative flex items-start gap-6 md:gap-0">
-          <div class="md:w-1/2 md:pr-12 md:text-right pl-10 md:pl-0">
+          <div class="md:w-1/2 md:pr-12 md:text-right">
             <span class="font-hand text-sk-pink">2020年 7月</span>
             <h3 class="font-mincho font-bold text-lg mt-1 text-sk-navy">日本ギフト大賞 飲食店応援賞</h3>
             <p class="text-sm text-sk-navy/65 mt-2 leading-relaxed">
@@ -373,7 +377,7 @@ tailwind.config = {
         </div>
 
         <div class="slide-up relative flex items-start gap-6 md:gap-0">
-          <div class="md:w-1/2 md:pr-12 md:text-right pl-10 md:pl-0">
+          <div class="md:w-1/2 md:pr-12 md:text-right">
             <span class="font-hand text-sk-pink">2021年〜</span>
             <h3 class="font-mincho font-bold text-lg mt-1 text-sk-navy">全国の街と手をつないで</h3>
             <p class="text-sm text-sk-navy/65 mt-2 leading-relaxed">
@@ -410,7 +414,55 @@ tailwind.config = {
 <!-- ===== PARALLAX: Sage gradient ===== -->
 <div class="parallax-window parallax-sage" role="presentation">
   <div class="relative z-10 h-full flex items-center justify-center">
-    <p class="font-hand text-white/50 text-lg tracking-[0.5em]">いただいた評価</p>
+    <p class="font-hand text-white/50 text-lg tracking-[0.5em]">届いた応援のかたち</p>
+  </div>
+</div>
+
+<!-- ===== IMPACT ===== -->
+<section id="impact" class="content-section py-20 bg-sk-mint">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="slide-up text-center mb-14">
+      <p class="font-hand text-sk-pink text-sm tracking-[0.3em] mb-2">IMPACT</p>
+      <h2 class="font-mincho text-3xl md:text-4xl font-bold mb-4 text-sk-navy">届いた想いの記録</h2>
+      <div class="washi-line w-32 mx-auto mb-5"></div>
+      <p class="font-mincho text-sk-navy/55 text-sm">飲食店と支援者をつないだ日々の数字</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+      <div class="slide-up bg-white/80 rounded-2xl p-7 shadow-sm border border-sk-sage3">
+        <h3 class="font-mincho font-bold text-base mb-5 text-sk-navy">月別支援金額の推移</h3>
+        <canvas id="monthlyChart" height="200"></canvas>
+      </div>
+      <div class="slide-up slide-up-delay-1 bg-white/80 rounded-2xl p-7 shadow-sm border border-sk-sage3">
+        <h3 class="font-mincho font-bold text-base mb-5 text-sk-navy">都道府県別 支援店舗数 TOP 10</h3>
+        <canvas id="prefectureChart" height="200"></canvas>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <div class="slide-up bg-white/80 rounded-xl p-5 text-center border border-sk-sage3">
+        <p class="text-2xl font-bold text-sk-sage font-hand">9+</p>
+        <p class="text-sm text-sk-navy/60 mt-1 font-mincho">連携パートナー</p>
+      </div>
+      <div class="slide-up slide-up-delay-1 bg-white/80 rounded-xl p-5 text-center border border-sk-sage3">
+        <p class="text-2xl font-bold text-sk-sage font-hand">¥X,XXX</p>
+        <p class="text-sm text-sk-navy/60 mt-1 font-mincho">平均支援額/回</p>
+      </div>
+      <div class="slide-up slide-up-delay-2 bg-white/80 rounded-xl p-5 text-center border border-sk-sage3">
+        <p class="text-2xl font-bold text-sk-sage font-hand">X,XXX</p>
+        <p class="text-sm text-sk-navy/60 mt-1 font-mincho">登録店舗数</p>
+      </div>
+      <div class="slide-up slide-up-delay-3 bg-white/80 rounded-xl p-5 text-center border border-sk-sage3">
+        <p class="text-2xl font-bold text-sk-sage font-hand">XX,XXX</p>
+        <p class="text-sm text-sk-navy/60 mt-1 font-mincho">登録ユーザー数</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PARALLAX: Key Visual again ===== -->
+<div class="parallax-window parallax-kv" role="presentation">
+  <div class="relative z-10 h-full flex items-center justify-center">
   </div>
 </div>
 
@@ -425,7 +477,7 @@ tailwind.config = {
     </div>
 
     <div class="grid md:grid-cols-2 gap-8">
-      <a href="https://www.g-mark.org/gallery/winners/9e385333-803d-11ed-af7e-0242ac130002" target="_blank" rel="noopener" class="slide-up photo-frame bg-white block">
+      <div class="slide-up photo-frame bg-white">
         <div class="bg-sk-mint p-6">
           <div class="flex items-start gap-4">
             <div class="stamp text-sk-sage border-sk-sage text-xs shrink-0 mt-1">BEST<br>100</div>
@@ -437,9 +489,9 @@ tailwind.config = {
           </div>
         </div>
         <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">Good Design Award 2020</p>
-      </a>
+      </div>
 
-      <a href="https://prtimes.jp/main/html/rd/p/000000085.000045433.html" target="_blank" rel="noopener" class="slide-up slide-up-delay-1 photo-frame bg-white block">
+      <div class="slide-up slide-up-delay-1 photo-frame bg-white">
         <div class="bg-sk-mint p-6">
           <div class="flex items-start gap-4">
             <div class="stamp text-sk-navy border-sk-navy text-xs shrink-0 mt-1">METI</div>
@@ -451,9 +503,9 @@ tailwind.config = {
           </div>
         </div>
         <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">Good Focus Award</p>
-      </a>
+      </div>
 
-      <a href="https://prtimes.jp/main/html/rd/p/000000059.000045433.html" target="_blank" rel="noopener" class="slide-up photo-frame bg-white block">
+      <div class="slide-up photo-frame bg-white">
         <div class="bg-sk-mint p-6">
           <div class="flex items-start gap-4">
             <div class="stamp text-sk-pink border-sk-pink text-xs shrink-0 mt-1">GIFT</div>
@@ -465,37 +517,37 @@ tailwind.config = {
           </div>
         </div>
         <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">Japan Gift Award 2020</p>
-      </a>
+      </div>
 
-      <a href="https://prtimes.jp/main/html/rd/p/000000089.000045433.html" target="_blank" rel="noopener" class="slide-up slide-up-delay-1 photo-frame bg-white block">
+      <div class="slide-up slide-up-delay-1 photo-frame bg-white">
         <div class="bg-sk-mint p-6">
           <div class="flex items-start gap-4">
             <div class="stamp text-sk-navy2 border-sk-navy2 text-xs shrink-0 mt-1">ACC</div>
             <div>
               <p class="font-hand text-sk-navy/50">2020</p>
               <h3 class="font-mincho font-bold text-base mt-1 text-sk-navy">ACC 銅賞</h3>
-              <p class="text-sm text-sk-navy/55 mt-2">マーケティング・エフェクティブネス部門</p>
+              <p class="text-sm text-sk-navy/55 mt-2">ACC</p>
             </div>
           </div>
         </div>
-        <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">ACC Bronze 2020</p>
-      </a>
+        <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">ACC Bronze</p>
+      </div>
 
       <div class="slide-up photo-frame bg-white">
         <div class="bg-sk-mint p-6">
           <div class="flex items-start gap-4">
-            <div class="stamp text-sk-orange border-sk-orange text-xs shrink-0 mt-1">APAC</div>
+            <div class="stamp text-sk-orange border-sk-orange text-xs shrink-0 mt-1">FORBES</div>
             <div>
               <p class="font-hand text-sk-navy/50">2021</p>
-              <h3 class="font-mincho font-bold text-base mt-1 text-sk-navy">Spikes Asia 2021<br>ブロンズ</h3>
-              <p class="text-sm text-sk-navy/55 mt-2">TANGRAMS Strategy & Effectiveness</p>
+              <h3 class="font-mincho font-bold text-base mt-1 text-sk-navy">Forbes 30 Under 30 Asia</h3>
+              <p class="text-sm text-sk-navy/55 mt-2">代表 今井了介</p>
             </div>
           </div>
         </div>
-        <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">Spikes Asia Bronze 2021</p>
+        <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">Forbes Asia 2021</p>
       </div>
 
-      <a href="https://prtimes.jp/main/html/rd/p/000000258.000045433.html" target="_blank" rel="noopener" class="slide-up slide-up-delay-1 photo-frame bg-white block">
+      <div class="slide-up slide-up-delay-1 photo-frame bg-white">
         <div class="bg-sk-mint p-6">
           <div class="flex items-start gap-4">
             <div class="stamp text-sk-sage border-sk-sage text-xs shrink-0 mt-1">WB</div>
@@ -507,7 +559,7 @@ tailwind.config = {
           </div>
         </div>
         <p class="font-hand text-xs text-sk-navy/35 text-center mt-2">Well-being Award 2023</p>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -597,23 +649,23 @@ tailwind.config = {
         <p class="text-sm text-sk-navy/50 mt-1">東京新聞</p>
       </div>
 
-      <a href="https://r25.jp/articles/928885231176187905" target="_blank" rel="noopener" class="slide-up slide-up-delay-1 media-card bg-white/85 rounded-xl p-5 border border-sk-sage3 block" data-category="web">
+      <div class="slide-up slide-up-delay-1 media-card bg-white/85 rounded-xl p-5 border border-sk-sage3" data-category="web">
         <div class="flex items-center gap-3 mb-3">
           <span class="bg-sk-orange/10 text-sk-orange text-xs font-bold px-2 py-1 rounded font-hand">Web</span>
           <span class="text-sm text-sk-navy/35 font-hand">2020.05.25</span>
         </div>
         <h4 class="font-mincho font-bold text-base text-sk-navy">安室奈美恵も手掛けた音楽Pが「さきめし」を始めた理由</h4>
         <p class="text-sm text-sk-navy/50 mt-1">新R25</p>
-      </a>
+      </div>
 
-      <a href="https://www.itmedia.co.jp/news/articles/2004/07/news128.html" target="_blank" rel="noopener" class="slide-up slide-up-delay-2 media-card bg-white/85 rounded-xl p-5 border border-sk-sage3 block" data-category="web">
+      <div class="slide-up slide-up-delay-2 media-card bg-white/85 rounded-xl p-5 border border-sk-sage3" data-category="web">
         <div class="flex items-center gap-3 mb-3">
           <span class="bg-sk-orange/10 text-sk-orange text-xs font-bold px-2 py-1 rounded font-hand">Web</span>
           <span class="text-sm text-sk-navy/35 font-hand">2020.04.07</span>
         </div>
         <h4 class="font-mincho font-bold text-base text-sk-navy">新型コロナで苦しむ飲食店を救えるか</h4>
         <p class="text-sm text-sk-navy/50 mt-1">ITmedia NEWS</p>
-      </a>
+      </div>
 
       <div class="slide-up media-card bg-white/85 rounded-xl p-5 border border-sk-sage3" data-category="radio">
         <div class="flex items-center gap-3 mb-3">
@@ -623,15 +675,6 @@ tailwind.config = {
         <h4 class="font-mincho font-bold text-base text-sk-navy">ONE MORNING「STAY HOME さきめし WEEK」</h4>
         <p class="text-sm text-sk-navy/50 mt-1">TOKYO FM</p>
       </div>
-
-      <a href="https://www.joqr.co.jp/qr/article/2777/" target="_blank" rel="noopener" class="slide-up slide-up-delay-1 media-card bg-white/85 rounded-xl p-5 border border-sk-sage3 block" data-category="radio">
-        <div class="flex items-center gap-3 mb-3">
-          <span class="bg-purple-50 text-purple-500 text-xs font-bold px-2 py-1 rounded font-hand">Radio</span>
-          <span class="text-sm text-sk-navy/35 font-hand">2020</span>
-        </div>
-        <h4 class="font-mincho font-bold text-base text-sk-navy">医療従事者と地域の飲食店を支援するプロジェクト</h4>
-        <p class="text-sm text-sk-navy/50 mt-1">文化放送</p>
-      </a>
 
     </div>
   </div>
@@ -688,6 +731,33 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- ===== VIDEO ===== -->
+<section id="video" class="content-section py-20 bg-sk-mint">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="slide-up text-center mb-14">
+      <p class="font-hand text-sk-pink text-sm tracking-[0.3em] mb-2">MOVIE</p>
+      <h2 class="font-mincho text-3xl md:text-4xl font-bold mb-4 text-sk-navy">映像で振り返る</h2>
+      <div class="washi-line w-32 mx-auto"></div>
+    </div>
+    <div class="slide-up grid md:grid-cols-2 gap-6">
+      <div class="aspect-video bg-sk-sage3/50 rounded-2xl border-2 border-dashed border-sk-sage/30 flex items-center justify-center">
+        <div class="text-center text-sk-navy/35">
+          <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <p class="text-base font-mincho">YouTube 動画 1</p>
+          <p class="text-sm mt-1 font-hand">（動画 URL 確定後に埋め込み）</p>
+        </div>
+      </div>
+      <div class="aspect-video bg-sk-sage3/50 rounded-2xl border-2 border-dashed border-sk-sage/30 flex items-center justify-center">
+        <div class="text-center text-sk-navy/35">
+          <svg class="w-12 h-12 mx-auto mb-2" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <p class="text-base font-mincho">YouTube 動画 2</p>
+          <p class="text-sm mt-1 font-hand">（動画 URL 確定後に埋め込み）</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== PARALLAX: Navy (before footer) ===== -->
 <div class="parallax-window parallax-navy" role="presentation">
   <div class="relative z-10 h-full flex items-center justify-center">
@@ -705,14 +775,10 @@ tailwind.config = {
         ありがとうございました
       </h2>
       <p class="text-white/40 text-base font-mincho leading-relaxed max-w-md mx-auto">
-        さきめしはサービスを終了しました。<br>
+        さきめしは 20XX年X月をもってサービスを終了しました。<br>
         届けてくださった想いは、これからも私たちの中に残り続けます。
       </p>
     </div>
-
-    <a href="https://gochi.online/" target="_blank" rel="noopener" class="inline-block font-mincho text-sm text-white/80 border border-white/25 hover:bg-white/10 transition-colors rounded-full px-8 py-3 mb-10">
-      ごちめし で誰かにごちそうする →
-    </a>
 
     <div class="washi-line w-24 mx-auto mb-10 opacity-30"></div>
 
@@ -734,6 +800,28 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.slide-up').forEach(el => observer.observe(el));
 
+// Counter
+function animateCounters() {
+  document.querySelectorAll('.counter').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    const prefix = el.dataset.prefix || '';
+    const duration = 2500;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = prefix + Math.floor(target * eased).toLocaleString();
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+const heroObs = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting) { animateCounters(); heroObs.disconnect(); }
+}, { threshold: 0.3 });
+heroObs.observe(document.querySelector('.hero-bg'));
+
 // Media filter
 function filterMedia(category) {
   document.querySelectorAll('.media-card').forEach(c => {
@@ -745,6 +833,58 @@ function filterMedia(category) {
   event.target.className = 'media-tab px-4 py-2 rounded-full text-sm font-mincho bg-sk-navy text-white';
 }
 
+// Charts — sakimeshi color palette
+const cFont = { family: '"Noto Sans JP", sans-serif', size: 12 };
+const cGrid = 'rgba(43,76,111,0.06)';
+const cTick = '#2B4C6F';
+
+new Chart(document.getElementById('monthlyChart'), {
+  type: 'bar',
+  data: {
+    labels: ['4月','5月','6月','7月','8月','9月','10月','11月','12月','1月','2月','3月'],
+    datasets: [{
+      label: '支援金額（万円）',
+      data: [850,1200,980,760,540,620,710,580,490,420,380,350],
+      backgroundColor: 'rgba(232,96,122,0.45)',
+      hoverBackgroundColor: 'rgba(232,96,122,0.7)',
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      title: { display: true, text: '2020年度（ダミーデータ）', font: cFont, color: cTick, padding: { bottom: 12 } }
+    },
+    scales: {
+      y: { beginAtZero: true, ticks: { callback: v => v+'万', font: cFont, color: cTick }, grid: { color: cGrid } },
+      x: { grid: { display: false }, ticks: { font: cFont, color: cTick } }
+    }
+  }
+});
+
+new Chart(document.getElementById('prefectureChart'), {
+  type: 'bar',
+  data: {
+    labels: ['東京','大阪','福岡','神奈川','愛知','兵庫','京都','北海道','広島','宮城'],
+    datasets: [{
+      label: '店舗数',
+      data: [420,280,195,180,150,130,95,85,70,55],
+      backgroundColor: 'rgba(141,190,183,0.55)',
+      hoverBackgroundColor: 'rgba(141,190,183,0.8)',
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: { legend: { display: false } },
+    scales: {
+      x: { beginAtZero: true, ticks: { callback: v => v+'店', font: cFont, color: cTick }, grid: { color: cGrid } },
+      y: { grid: { display: false }, ticks: { font: cFont, color: cTick } }
+    }
+  }
+});
 </script>
 
 </body>

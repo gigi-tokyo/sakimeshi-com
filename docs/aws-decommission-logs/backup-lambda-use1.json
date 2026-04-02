@@ -1,0 +1,103 @@
+{
+    "Functions": [
+        {
+            "FunctionName": "BasicAuthentication",
+            "FunctionArn": "arn:aws:lambda:us-east-1:682138580642:function:BasicAuthentication",
+            "Runtime": "nodejs10.x",
+            "Role": "arn:aws:iam::682138580642:role/service-role/lambda-edge-role",
+            "Handler": "index.handler",
+            "CodeSize": 567,
+            "Description": "ベーシック認証",
+            "Timeout": 3,
+            "MemorySize": 128,
+            "LastModified": "2020-05-06T03:35:57.753+0000",
+            "CodeSha256": "Eq8kXYo46rh2Ih3dULRIvH5FdpfaDuTvEGF78znNj10=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "19b95316-80a6-4ba3-9fd8-346ce9b78c7f",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/BasicAuthentication"
+            }
+        },
+        {
+            "FunctionName": "redirectToTrailingSlash",
+            "FunctionArn": "arn:aws:lambda:us-east-1:682138580642:function:redirectToTrailingSlash",
+            "Runtime": "nodejs10.x",
+            "Role": "arn:aws:iam::682138580642:role/service-role/lambda-edge-role",
+            "Handler": "index.handler",
+            "CodeSize": 700,
+            "Description": "",
+            "Timeout": 3,
+            "MemorySize": 128,
+            "LastModified": "2020-05-06T03:31:41.832+0000",
+            "CodeSha256": "vbfF6SNbeph/5XiyS9xwqGfwyRxGYmDL7DpcdmnMBo4=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "b06cf713-e6a3-4e58-ae4a-2a8684812c47",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/redirectToTrailingSlash"
+            }
+        },
+        {
+            "FunctionName": "OriginRequest",
+            "FunctionArn": "arn:aws:lambda:us-east-1:682138580642:function:OriginRequest",
+            "Runtime": "nodejs10.x",
+            "Role": "arn:aws:iam::682138580642:role/service-role/lambda-edge-role",
+            "Handler": "index.handler",
+            "CodeSize": 740,
+            "Description": "index.htmlリダイレクト",
+            "Timeout": 5,
+            "MemorySize": 128,
+            "LastModified": "2020-05-06T05:43:09.486+0000",
+            "CodeSha256": "V+F1Vm9P1uuCkVT6TIkRPH4HVSGKAgYGLYely500vns=",
+            "Version": "$LATEST",
+            "TracingConfig": {
+                "Mode": "PassThrough"
+            },
+            "RevisionId": "1ce755fd-a2a0-47fc-ad3a-28f0198b5cfc",
+            "PackageType": "Zip",
+            "Architectures": [
+                "x86_64"
+            ],
+            "EphemeralStorage": {
+                "Size": 512
+            },
+            "SnapStart": {
+                "ApplyOn": "None",
+                "OptimizationStatus": "Off"
+            },
+            "LoggingConfig": {
+                "LogFormat": "Text",
+                "LogGroup": "/aws/lambda/OriginRequest"
+            }
+        }
+    ]
+}

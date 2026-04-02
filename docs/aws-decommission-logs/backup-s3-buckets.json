@@ -1,0 +1,33 @@
+{
+    "Buckets": [
+        {
+            "Name": "cf-accesslog-sakimeshi",
+            "CreationDate": "2024-11-07T22:49:58+00:00",
+            "BucketArn": "arn:aws:s3:::cf-accesslog-sakimeshi"
+        },
+        {
+            "Name": "file.sakimeshi-stg",
+            "CreationDate": "2024-11-08T01:35:47+00:00",
+            "BucketArn": "arn:aws:s3:::file.sakimeshi-stg"
+        },
+        {
+            "Name": "sakai.sakimeshi.com",
+            "CreationDate": "2024-11-20T22:27:05+00:00",
+            "BucketArn": "arn:aws:s3:::sakai.sakimeshi.com"
+        },
+        {
+            "Name": "sakimeshi-prd",
+            "CreationDate": "2024-11-13T17:54:51+00:00",
+            "BucketArn": "arn:aws:s3:::sakimeshi-prd"
+        },
+        {
+            "Name": "sakimeshi-stg",
+            "CreationDate": "2024-11-08T04:02:10+00:00",
+            "BucketArn": "arn:aws:s3:::sakimeshi-stg"
+        }
+    ],
+    "Owner": {
+        "ID": "ae02732e7f63d1bb73d82f779bb9284fe76a6b3e88d2aaa923876b380786d0a2"
+    },
+    "Prefix": null
+}

@@ -1,0 +1,34 @@
+{
+    "Users": [
+        {
+            "Path": "/",
+            "UserName": "sakimeshi-admin",
+            "UserId": "AIDAZ5UVAW2RJVBF7RKUJ",
+            "Arn": "arn:aws:iam::682138580642:user/sakimeshi-admin",
+            "CreateDate": "2020-05-04T08:46:06+00:00",
+            "PasswordLastUsed": "2020-05-25T21:46:29+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "sakimeshi-cli",
+            "UserId": "AIDAZ5UVAW2RNVFWDOAOP",
+            "Arn": "arn:aws:iam::682138580642:user/sakimeshi-cli",
+            "CreateDate": "2020-09-02T08:27:40+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "sakimeshi-s3",
+            "UserId": "AIDAZ5UVAW2RLAJII436O",
+            "Arn": "arn:aws:iam::682138580642:user/sakimeshi-s3",
+            "CreateDate": "2020-05-06T02:30:04+00:00"
+        },
+        {
+            "Path": "/",
+            "UserName": "yusuke.mori-gigi",
+            "UserId": "AIDAZ5UVAW2RAKAJM5TVH",
+            "Arn": "arn:aws:iam::682138580642:user/yusuke.mori-gigi",
+            "CreateDate": "2026-03-27T09:34:28+00:00",
+            "PasswordLastUsed": "2026-03-28T01:16:33+00:00"
+        }
+    ]
+}

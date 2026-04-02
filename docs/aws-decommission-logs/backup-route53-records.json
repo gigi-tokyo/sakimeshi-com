@@ -1,0 +1,529 @@
+{
+    "ResourceRecordSets": [
+        {
+            "Name": "sakimeshi.com.",
+            "Type": "A",
+            "AliasTarget": {
+                "HostedZoneId": "Z14GRHDCWA56QT",
+                "DNSName": "dualstack.sakimeshi-alb-redirect-1676421597.ap-northeast-1.elb.amazonaws.com.",
+                "EvaluateTargetHealth": false
+            }
+        },
+        {
+            "Name": "sakimeshi.com.",
+            "Type": "MX",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "10 mx.securemx.jp"
+                }
+            ]
+        },
+        {
+            "Name": "sakimeshi.com.",
+            "Type": "NS",
+            "TTL": 172800,
+            "ResourceRecords": [
+                {
+                    "Value": "ns-537.awsdns-03.net."
+                },
+                {
+                    "Value": "ns-1060.awsdns-04.org."
+                },
+                {
+                    "Value": "ns-276.awsdns-34.com."
+                },
+                {
+                    "Value": "ns-1828.awsdns-36.co.uk."
+                }
+            ]
+        },
+        {
+            "Name": "sakimeshi.com.",
+            "Type": "SOA",
+            "TTL": 900,
+            "ResourceRecords": [
+                {
+                    "Value": "ns-537.awsdns-03.net. awsdns-hostmaster.amazon.com. 1 7200 900 1209600 86400"
+                }
+            ]
+        },
+        {
+            "Name": "_5e35439b9ba111e07eddfab29a88c6af.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_3f8580b8fa327e4f6f5f72e42bcb5b47.auiqqraehs.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "_a59435a49f4c1afcf5dcbe669b01bc56.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 360,
+            "ResourceRecords": [
+                {
+                    "Value": "_ac36ed9b8b021e613c628e4d23b781a5.zdxcnfdgtt.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "akishima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_ae9b45cb15316c6c56c4dcf98c662ed9.akishima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_7d425692be74a9707e3e788a3f676a07.jfrzftwwjs.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "choisoko-okazaki.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "daigas-energy.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "fukuoka.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_ee692a7f6c8331e3fa94dd2597ecc896.fukuoka.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_683d2a25eca89e13cd369f7f7bbd380b.zdxcnfdgtt.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "gasfes.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "gasten.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "hamamatsu.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "happy-eat.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "hiroshima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "_7af8945ede7a9e956f3c3802e61acea3.hiroshima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_819c0e4c03e5fa1b360ed1d49d9e87cf.jfrzftwwjs.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "ikoma.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "_02114b1809ebfb17f79e0d14314b5cdd.ikoma.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_fd5aaf2217c96df7e435970cca184627.jfrzftwwjs.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "kobe.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_439fcc78f6b61752fea3cf47f193a5ca.kobe.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_fc91f710799accdc96c936540bfae8a9.zdxcnfdgtt.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "nagasaki.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_986635978fefcb5c5e0fa544ec541b6d.nagasaki.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_a5dce03a8d3b40653672f8c51d621af2.tfmgdnztqk.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "narashino-ticket.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "okazaki.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "okz-rally-mawarin.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "s-daigas-energy.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "saibufes.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "cname.vercel-dns.com"
+                }
+            ]
+        },
+        {
+            "Name": "sakai.sakimeshi.com.",
+            "Type": "A",
+            "AliasTarget": {
+                "HostedZoneId": "Z2FDTNDATAQYW2",
+                "DNSName": "d3iebipncj1fhm.cloudfront.net.",
+                "EvaluateTargetHealth": false
+            }
+        },
+        {
+            "Name": "sakura.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "stg-akishima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_bbb266dc3d67e58b3cdff2ccfc072806.stg-akishima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_73c1efa5f248498594ab9675e312dbe1.jfrzftwwjs.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "stg-fukuoka.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_60b778cf2793d5b88d2aa9763c83afab.stg-fukuoka.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_ca134009ce7f09bc0d2e0ae3f3b858a6.zdxcnfdgtt.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "stg-gasfes.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "stg-hamamatsu.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "stg-happy-eat.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "stg-hiroshima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_772e00f2a1185adcffeff68370852634.stg-hiroshima.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_1f2deac569f6e0fa1f416b7b0e935752.jfrzftwwjs.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "stg-ikoma.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_ca4d6ea5ce3098ab36af6c51ac4eae2c.stg-ikoma.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_25f9f6bccce3e199e52129818d4314f2.jfrzftwwjs.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "stg-kobe.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_8eaf1561508c6a7a6239126cc2276737.stg-kobe.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_a54e1aaca6beaa488a23ac2fc31874af.zdxcnfdgtt.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "stg-nagasaki.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "_020093a64bd0df8eb10e9b0a7eac8da3.stg-nagasaki.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 300,
+            "ResourceRecords": [
+                {
+                    "Value": "_870c1db052b572756cbc5d7c0dd56ad1.tfmgdnztqk.acm-validations.aws."
+                }
+            ]
+        },
+        {
+            "Name": "stg-sakura.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "stg-test.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "stg-yotsukaido.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-staging-alb-847424892.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        },
+        {
+            "Name": "stg.sakimeshi.com.",
+            "Type": "A",
+            "AliasTarget": {
+                "HostedZoneId": "Z2FDTNDATAQYW2",
+                "DNSName": "d7yo7wtejm1ly.cloudfront.net.",
+                "EvaluateTargetHealth": false
+            }
+        },
+        {
+            "Name": "www.sakimeshi.com.",
+            "Type": "A",
+            "AliasTarget": {
+                "HostedZoneId": "Z2FDTNDATAQYW2",
+                "DNSName": "d17dfoily3kssy.cloudfront.net.",
+                "EvaluateTargetHealth": false
+            }
+        },
+        {
+            "Name": "yotsukaido.sakimeshi.com.",
+            "Type": "CNAME",
+            "TTL": 60,
+            "ResourceRecords": [
+                {
+                    "Value": "lexus-alb-2123465509.ap-northeast-1.elb.amazonaws.com"
+                }
+            ]
+        }
+    ]
+}
